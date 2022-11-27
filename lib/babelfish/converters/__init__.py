@@ -2,13 +2,13 @@
 # Use of this source code is governed by the 3-clause BSD license
 # that can be found in the LICENSE file.
 #
-import collections
+from collections.abc import MutableMapping
 from pkg_resources import iter_entry_points, EntryPoint
 from ..exceptions import LanguageConvertError, LanguageReverseError
 
 
 # from https://github.com/kennethreitz/requests/blob/master/requests/structures.py
-class CaseInsensitiveDict(collections.MutableMapping):
+class CaseInsensitiveDict(MutableMapping):
     """A case-insensitive ``dict``-like object.
 
     Implements all methods and operations of
